@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 0px;
+  background: #f1f1f1;
+}
+
+.header-1 {
+    background-image: url('img/headerbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(181, 179, 179, 0.5); /* Black tint */
+    background-blend-mode: multiply; /* Darkens the image */
+    color: white;
+    padding: 20px;
+    height: 350px;
+    width: 100%;
+    text-align: left;
+}
+
+.header-2 {
+    background-image: url('img/headerbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(181, 179, 179, 0.5); /* Black tint */
+    background-blend-mode: multiply; /* Darkens the image */
+    color: white;
+    padding: 20px;
+    height: 350px;
+    width: 100%;
+    text-align: left;
+}
+
+.header-1 h1 {
+margin-left: 15%;
+margin-top: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header-1 p {
+margin-left: 15%;
+  font-size: 15px;
+  font-weight:bold;
+}
+
+
+.pill-nav {
+  height: 100%;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+.pill-nav a {
+  display: block;
+  color: black;
+  padding: 14px;
+  margin-bottom: 6px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.pill-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.pill-nav a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+.menu-toggle {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Hidden by default, shown on small screens */
+  padding: 10px;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+/* Optional: main-content-content-content content shift when sidebar visible */
+.main-content {
+  margin-left: 180px;
+}
+
+.body-content{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.col1 {   
+  float: left;
+  width: 70%;
+}
+
+/* Right column */
+.col2 {
+  float: left;
+  width: 30%;
+  background-color: #f1f1f1;
+  padding-left: 10px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+    border: none; /* Remove border */
+  box-shadow: none; 
+}
+
+.card-1 {
+  background-color: white;
+  margin-top: 20px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);  /* Soft subtle shadow */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card-1div {
+  background: rgb(232, 239, 249);
+  padding: 3%;
+  padding-left: 15%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5%;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 200px; /* Optional: limit height on large screens */
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .header {
+
+        height: 200px;
+}
+  .col1, .col2 {   
+    width: 100%;
+    padding: 0;
+  }
+
+   .pill-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+    .main-content {
+    margin-left: 0;
+  }
+}
+.header-1 h1 {
+margin-left: 10%;
+}
+
+.header-1 p {
+margin-left: 10%;}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar-nav a {
+    float: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Delay Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap JavaScript Bundle (Optional if you need interactivity) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+{% include 'sidebar.html' %}
+
+<div class="main-content">
+    <div class="header-1">
+  <h1>E-COMMERCE <br> DELIVERY DELAYS</h1>
+  <p>Investigate and Provide Insight Regarding<br> The Key Factors of E-commerce Delivery Delays</p>
+</div>
+<div class="body-content">
+<div class="row">
+  <div class="col1">
+    <div class="card">
+      <h2><strong>What is E-Commerce?</strong></h2>
+    <img src="{{ url_for('static', filename='img/ecommerce.png') }}" 
+        alt="Description of image" 
+        style="height:300px; width:100%; object-fit:cover; margin-bottom: 20px;">
+
+    <h4><strong>Experience the Future of Shopping</strong></h4>
+      <p>E-commerce in Malaysia is growing rapidly, driven by the fast pace of urban life and the increasing demand for convenience. More Malaysians 
+        are turning to online platforms for everything from daily essentials to luxury items, appreciating the time saved and ease of use. But modern 
+        shoppers expect more than just products — they want secure payments, quick deliveries, and reliable customer support. As competition rises, 
+        delivering a seamless and efficient shopping experience is key to earning customer trust and standing out in the digital marketplace.</p>
+    </div>
+    <div class="card">
+      <h2><strong>Delivery Delay: A Logistical Challenge</strong></h2>
+      <img src="{{ url_for('static', filename='img/delay.png') }}" alt="Description of image" style="height:300px; width:100%; object-fit:cover; margin-bottom: 20px;">
+      <p>In logistics and supply chain management, on-time delivery is 
+        critical. Despite efforts, delivery delays are common and can negatively affect both businesses and customers. Understanding the causes, consequences,
+         and solutions is key to improving performance.</p>
+      <h3>Impacts of Delivery Delays</h3>
+        <ul>
+          <li><strong>Customer dissatisfaction</strong> and potential loss of future sales.</li>
+          <li><strong>Operational disruptions</strong> like inventory and production issues.</li>
+          <li><strong>Increased costs</strong> due to overtime, express shipping, or penalties.</li>
+          <li><strong>Reputation damage</strong> that undermines brand trust.</li>
+          <li><strong>Lost sales</strong> from cart abandonment and missed opportunities.</li>
+        </ul>
+
+    </div>
+  </div>
+  <div class="col2">
+    
+    <div class="card">
+      <h4><strong>Fun Facts</strong></h4>
+      <img src="{{ url_for('static', filename='img/stats.png') }}"
+          alt="Description of image"
+          style="height: 100%; width: auto;"
+          >
+    </div>
+    <div class="card">
+    <h4></strong>Popular E-Commerce</strong>Popular</h4>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+        <img src="{{ url_for('static', filename='img/Shopee.png') }}" alt="Description of image" class="responsive-img">
+        <img src="{{ url_for('static', filename='img/Lazada.png') }}" alt="Description of image" class="responsive-img">
+        <img src="{{ url_for('static', filename='img/Amazon.png') }}" alt="Description of image" class="responsive-img">
+        <img src="{{ url_for('static', filename='img/Tiktok.png') }}" alt="Description of image" class="responsive-img">
+        <img src="{{ url_for('static', filename='img/Zalora.png') }}" alt="Description of image" class="responsive-img">
+        <img src="{{ url_for('static', filename='img/Ebay.png') }}" alt="Description of image" class="responsive-img">
+        <img src="{{ url_for('static', filename='img/Walmart.png') }}" alt="Description of image" class="responsive-img">
+        <img src="{{ url_for('static', filename='img/Carousell.png') }}" alt="Description of image" class="responsive-img">
+    </div>
+    </div>
+
+    <div class="card-1">
+        <h2 style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 600; text-align: center;">Causes of Delivery Delays</h2>
+          
+          <div class="card-1div">
+            <strong>🚗 Traffic Congestion</strong>  
+          </div>
+          
+          <div class="card-1div">
+            <strong>🌧️ Weather Conditions</strong>
+          </div>
+          
+          <div class="card-1div">
+            <strong>🔗 Supply Chain Disruptions</strong> 
+          </div>
+          
+          <div class="card-1div">
+            <strong>🛣️ Infrastructure Issues</strong>
+          </div>
+          
+          <div class="card-1div">
+            <strong>🛃 Customs Holdups</strong> 
+          </div>
+          
+          <div class="card-1div">
+            <strong>🔧 Vehicle Breakdowns</strong> 
+          </div>
+          <div class="card-1div">
+            <strong>👷 Driver Shortages</strong> 
+          </div>
+          
+          <div class="card-1div">
+            <strong>📦 Incorrect Addresses</strong> 
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

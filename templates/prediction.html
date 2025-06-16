@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Delay Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap JavaScript Bundle (Optional if you need interactivity) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% include 'sidebar.html' %}
+
+<div class="main-content">
+<div class="body-content">    
+<h2 style="text-align:center; font-weight:bold; margin-top:20px;">E-Commerce Delivery Delay Predictor</h2>
+<form method="post" action="/prediction">
+    <div class="mb-3">
+        <label>Discount Offered</label>
+        <input type="number" name="discount" step="0.01" required class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Weight (gms)</label>
+        <input type="number" name="weight" step="0.01" required class="form-control">
+    </div>
+    <div class="mb-3">
+        <label>Product Importance</label>
+        <select name="importance" class="form-control">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label>Cost Category</label>
+        <select name="cost_category" class="form-control">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label>Prior Purchase Category</label>
+        <select name="prior_category" class="form-control">
+            <option value="new">New</option>
+            <option value="medium">Medium</option>
+            <option value="frequent">Frequent</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label>Mode of Shipment</label>
+        <select name="shipment_mode" class="form-control">
+            <option value="Flight">Flight</option>
+            <option value="Ship">Ship</option>
+            <option value="Road">Road</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Predict</button>
+</form>
+
+{% if prediction %}
+    <div class="alert alert-info mt-4">
+        <h4>🧠 Prediction: {{ prediction }}</h4>
+        <p>Confidence: {{ probability }}%</p>
+    </div>
+{% endif %}
+</div></div>
+</body>
+</html>

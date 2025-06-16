@@ -1,0 +1,7 @@
+<!-- templates/sidebar.html -->
+<span class="menu-toggle" onclick="toggleSidebar()">&#9776;</span>
+<div class="pill-nav">
+  <a href="{{ url_for('dashboard') }}" class="{% if active_page == 'dashboard' %}active{% endif %}">Dashboard</a>
+  <a href="{{ url_for('powerbi') }}" class="{% if active_page == 'powerbi' %}active{% endif %}">Graphs</a>
+  <a href="{{ url_for('prediction') }}" class="{% if active_page == 'prediction' %}active{% endif %}">Prediction</a>
+</div>
